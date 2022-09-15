@@ -1,0 +1,3 @@
+This app takes some data from you. These are your IP address, computer name, username and password to manage your accounts and log in, what specific times you use the application, etc. None of these will be used for commercial purposes. This is just a project assignment and it's all set for both experimental and artistic purposes. All of your data will be kept in a cloud-based database. Your passwords will be stored in the database encrypted with SHA256. However, just in case, never use a password that you actually use, as this is an assignment. As the manufacturer, I declare that I take no responsibility for any leakage.
+1-> I have read and understood the instructions. I accept that I take all responsibility on myself. (type 1)
+2-> Quit (type 2)

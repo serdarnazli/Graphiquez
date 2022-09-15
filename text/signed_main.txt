@@ -1,0 +1,6 @@
+q->Exit
+1->Settings
+2->Graphiquez for datasets
+3->Graphiquez for mathematical functions
+4->Account
+Please type the section number that you want to go.

@@ -1,0 +1,4 @@
+username'Please type your username:  
+password'Please type your password:  
+activateremember'If you want to activate Remember Me feature please type 0, If you do not want it hit enter.
+wrongpassword'Wrong password. Please try again. If you want to go back please type 1, To try again just hit enter.
