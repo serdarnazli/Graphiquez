@@ -24,12 +24,6 @@ This project uses a cloud database which is mongodb atlas. In the database for l
 
         
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-For the instructor who is reading this, 
-You can use this account instead of creating a new one: username = ITUADMIN
-                                                        password = ITUITUADMINADMIN1773
-               
-In the submission there is a file **accinfos** in the folder important which includes all information about database access. To manage the database, a completely new gmail account and mongodb account are created. I have shared the passwords information, birthday information, gender information etc.. 
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 -
 -
