@@ -8,10 +8,11 @@
 
 
 HOW TO RUN?
-'''
+
+```
 pip install -r requirements.txt
 python3 main/main.py
-'''
+```
 
 
 
