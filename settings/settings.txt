@@ -1,14 +1,14 @@
-export_location:/Users/serdarnazli/Desktop/ITU/21-22 Bahar/YZV104E/Graphiquez/Graphiquez/drawings
-read_location:/Users/serdarnazli/Desktop/ITU/21-22 Bahar/YZV104E/Graphiquez/Graphiquez/datas
+export_location:None
+read_location:None
 export_extension:.jpeg
-color:b
-xlabel:Axis x
-ylabel:Axis y
+color:red
+xlabel:Axis X
+ylabel:Axis Y
 linestyle:solid
-dpi:250
+dpi:400
 marker_plot:None
 marker_scatter:o
-random_key:4737ee48e8a9a4e0a21d98fb5bf8736b14c0c18d2b0ee5a02ab39d90086a7e37-398003a546839e0decb72045a4b10d7bb78e52dfa497b61ab0a18cd22c400bfd
+random_key:0
 legend_location:upper left
 mode:pro
 evervisited:1
