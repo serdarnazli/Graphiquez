@@ -7,8 +7,11 @@
 
 
 
-
-**After installing the requirements in the requirements.txt** All you have to do is **run main.py**
+HOW TO RUN?
+'''
+pip install -r requirements.txt
+python3 main/main.py
+'''
 
 
 
