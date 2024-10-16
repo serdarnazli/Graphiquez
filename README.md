@@ -1,216 +1,109 @@
+
 # GRAPHIQUEZ
-### A data visualizer application that runs on terminal.
 
+### A terminal-based data visualization application.
 
+---
 
+## How to Run
 
-
-
-
-HOW TO RUN?
-
-```
+```bash
 pip install -r requirements.txt
 python3 main/main.py
 ```
 
+### Database Usage
 
+This project uses a cloud database (MongoDB Atlas) to store log records. Your IP address and computer name will be saved. Additionally, your username and password (encrypted with SHA256) will be stored to manage your account.
 
--
--
--
--
--
+---
 
-This project uses a cloud database which is mongodb atlas. In the database for log records, your ip adress and computer name will be saved. For enable you to manage your accounts this application also saves your username and your password-encrypted with SHA256-. 
+## Application Features
 
+After logging in, you will have four options:
 
+1. **Settings**: Modify application settings.
+2. **Graphiquez for Datasets**: Select datasets and create visualizations as you wish.
+3. **Graphiquez for Mathematical Functions**: Choose 2D or 3D, input a function, and let it plot.
+4. **Account**: View and manage your account information.
 
-        
-----------------------------------------------------------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------------------------------------------------------
--
--
+---
 
--
--
--
--
--
--
--
--
+## Graphiquez for Datasets (PRO Mode)
 
+You can select datasets for the x and y axes using one of the following methods:
 
+1. Use files located in the default folder.
+2. Provide the complete path to a file.
+3. Provide a link containing an HTML table.
 
+### Terminal Commands and Parameters
 
+After selecting your dataset, you'll see a terminal interface with the following functions:
 
+1. **draw**: Draws graphs.
+   - Example: `draw=scatter color=blue xlabel=xaxis ylabel=yaxis title=mygraph`
+2. **show**: Displays the graph.
+   - Example: Just type `show`
+3. **savefigure**: Saves the figure as a project file to continue working on it later.
+4. **save**: Saves the figure as an image.
+5. **changedata**: Updates the dataset or column you are working on.
+   - Example: `changedata=x file=example.xlsx column=0`
+6. **reset**: Resets the figure, clearing all settings and data.
 
-------------------------------------------
-After logging in, you have 4 choices:
---------------------------------------
+---
 
+### Usage and Parameters
 
-1. Settings 
-  - You can change the settings in here.
-2. Graphiquez for datasets
-  - Choose datasets and plot them as you wish
-3. Graphiquez for mathematical functions
-  - Choose 2D or 3D and give the function, let it plot
-4. Account
-  - See the account informations
-  
-  
-  
-  
- -
- -
- -
- -
- -
- -
- -
- -
- -
- -
- 
-  
-  
-  
----------------------------------------------------------------
-Graphiquez for dataset PRO mode
----------------------------------------------------------------
+Note: Not all parameters are required; defaults will be used for any omitted.
 
-You will choose datasets that will be used for x axis and y axis. You have 3 options;
-1. Use files that located on default folder 
-2. Give the path 
-  -You should give the complete path.
-3. Give the link
-  - Be sure that the link contains html table.
+#### Draw Commands
 
--
--
--
--
--
-
-
-
-
-After choosing the datasets you will be greeted with something like terminal provided below. 
--->
--->
--->
-In this section, there are some functions that you can use. 
-Those are;
-
-
-1. draw
-  - Ables you to draw graphs
-    - example: draw=scatter color=blue xlabel=xaxis ylabel=yaxis title=mygraph
-2. show
-  -It will show the graph
-    - example: just type 'show'
-3. savefigure
-  - To save figure as a figure, not as a image. This will allow you to work on it again.
-4. save
-  - It will the figure as a image.
-5. changedata 
-  - This function allows you to change the dataset/row-column that you are working on.
-    - e.g -> changedata=x file=example.xlsx column= 0 (the data for x axis changed with 0th column of example.csv)
-6. reset
-  - This will reset the figure. Everything will be deleted.
- 
- 
-
- 
-**__USAGES AND ALL PARAMETERS__**
-
-Note: You do not have to give all of the parameters. The ones that you did not use will be default.
+```plaintext
+draw=line color=<red,blue,green...> label=<name> xlabel=<name> ylabel=<name> title=<name> linestyle=<solid,dashed...> marker=<o,-...>
+draw=scatter color=<red,...> label=<name> xlabel=<name> ylabel=<name> title=<name> marker=<o,-...>
+draw=bar color=<color> xlabel=<name> ylabel=<name> title=<name> width=<value>
+draw=pie title=<name>
 ```
---DRAW--------------------------------------------------------------------------------------------------------------------------------------------------------
-draw=line color= <red,blue,green...>   label= <name_it>  xlabel = <name_it>    ylabel = <name_it>    title = <name_it>    
-          linestyle= <solid,dashed...>  marker = <o,-...>
 
-draw=scatter color = <red....>   label = <name_it>    xlabel = <name_it   ylabel = <name_it>   title = <name_it> 
-             marker = <o,-....>  
-             
-draw=bar  color = <...>     xlabel=<name_it>     ylabel=<name_it>       title = <name_it>          width = <e.g 0.7>
+#### Non-Parameter Commands
 
-draw=pie  title=<name_it> 
---------------------------------------------------------------------------------------------------------------------------------------------------------------
--
--
--
+- **show**: Displays the graph.
+- **savefigure**: Saves the figure as a project file.
+- **reset**: Resets the figure and clears all settings.
 
--NON PARAMETER FUNCTIONS--------------------------------------------------------------------------------------------------------------------------------------
+#### Save Command
 
-show
+- Use the `name` parameter to save in the default folder.
+- Use the `path` parameter to save to a specified location.
+  - Example: `save=chart extension=.png name=example` or `save=chart path=/users/yourname/desktop/extension=.jpeg`
 
-savefigure 
+---
 
-reset 
+### Changing Data
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------
--
--
--
----SAVE----------------------------------------------------------------------------------------------------------------------------------------------------
-#If you use 'name' parameter it will be saved on default folder. 
-#If you use 'path' parameter it will be saved on the given path. 
-#e.g -> path = /users/myname/desktop/myfolder/example 
-        extension = .jpeg
+- The `file` parameter searches in the default folder (changeable in settings).
+- Example: `changedata=x file=example.csv column=0`
+- Example with path: `changedata=x path=/path/to/file.csv column=0`
+- Example with link: `changedata=x link=http://example.com/table column=0`
 
-save=<typeanythinghere>     extension = <.jpeg,.jpg,.png....>    'name = <nameoftheimage>    'OR'    export_location = <path> '        dpi = <250,300...>
+---
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
--
--
--
---------------CHANGEDATA------------------------------------------------------------------------------------------------------------------------------
+## Graphiquez for Amateurs
 
-#Be aware that 'file' parameter search the file on default folder. You can check/change default folder on settings section.
+Similar to PRO mode, but parameters are given as ordinary inputs. Type `default` for any input you want to use default values.
 
-changedata = <x,y>      file=<nameofthefile.csv/xlsx>            'row = <rownumber>      'OR'     column = <columnnumber>'
-changedata = <x,y>      path=<thepathofthefile.csv/xlsx>         'row = <rownumber>      'OR'     column = <columnnumber>'
-changedata = <x,y>      link=<thelink>                           'row = <rownumber>      'OR'     column = <columnnumber>'
+---
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+## Graphiquez for Mathematical Functions
 
-```
-     
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-#GRAPHIQUEZ FOR AMATEURS
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-Again, you will choose datasets for x and y axis. But this time the parameters will be given as ordinary inputs.
-type 'default' to a input if you want a default parameter.
+1. **2D**
+2. **3D**
 
+Input the function with only `x` and `y` variables. No trigonometric functions like `sin`, `cos`, etc. are allowed.
 
+**Important Notes:**
+- Write `2*x` instead of `2x`.
+- Write `x**2` instead of `x^2`.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-#GRAPHIQUEZ FOR MATHEMATICAL FUNCTIONS.
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-1. 2D
-2. 3D
--
--
-
-Firstly, it will ask you to type your function. _The functions only x and y are allowed. No sin, cos, etc._
-Important note: 
-Do **not** write _2x_
-
-Do     write _2*x_
-
-Do **not** write _x^2_
-
-Do     write _x**2_
-
--
--
-
-Then it will ask for the limits of x axis. Type as you wish.
-
-
-
-
-
+Define the limits for the x-axis when prompted.
