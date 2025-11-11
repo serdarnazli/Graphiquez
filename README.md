@@ -3,6 +3,7 @@
 
 ### A terminal-based data visualization application.
 
+This application is a CLI app. I developed this on my first year at university as a term project for Python course and it was written in a timeline where there was no LLM's. Crazy to see every line of code is written by me.  
 ---
 
 ## How to Run
